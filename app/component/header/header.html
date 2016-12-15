@@ -1,4 +1,4 @@
-<div class="top">
+<div class="top" *ngIf="bean">
 <nav class="navbar navbar-default" role="navigation" >
     <div class="container-fluid">
     <div class="navbar-header">
@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">简云</a>
+        <a class="navbar-brand" href="#">{{bean.title}}</a>
     </div>
 
     <div class="collapse navbar-collapse" id="example-navbar-collapse">
@@ -22,8 +22,8 @@
         </form>
     </div>
     <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span>登录</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>注册</a></li>
+        <li><a href="{{bean.login}}"><span class="glyphicon glyphicon-user"></span>登录</a></li>
+        <li><a href="{{bean.register}}"><span class="glyphicon glyphicon-log-in"></span>注册</a></li>
     </ul>
     </div>
     </div>
